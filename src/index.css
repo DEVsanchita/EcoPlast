@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+/* Respect users who've asked for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+@layer components {
+  .hero-buttons {
+    @apply flex flex-wrap items-center gap-4;
+  }
+
+  .hero-primary-btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full
+      bg-gradient-to-r from-emerald-400 to-green-600 text-white font-semibold text-sm
+      shadow-lg shadow-emerald-900/40
+      hover:shadow-emerald-500/30 hover:scale-[1.03]
+      active:scale-95 transition-all duration-200
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950;
+  }
+
+  .hero-secondary-btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-full
+      border border-emerald-500/40 text-emerald-300 font-semibold text-sm
+      hover:bg-emerald-500/10 hover:border-emerald-400/60 hover:text-emerald-200
+      active:scale-95 transition-all duration-200
+      focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950;
+  }
+}
