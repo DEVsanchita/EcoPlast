@@ -2,6 +2,8 @@
 
 EcoPlast is an AI-assisted plastic waste management web app built with React, Vite and Tailwind CSS.
 
+### Website Link: https://ecoplast-i6cg.onrender.com
+
 ## Included features
 
 - AI plastic assistant powered by Google Gemini
